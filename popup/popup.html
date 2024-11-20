@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SmartMail Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <h1>SmartMail Assistant</h1>
+    <div id="status">Estado: <span id="status-text">Activo</span></div>
+    
+    <div id="current-mail-info" class="hidden">
+      <h2>Correo Actual</h2>
+      <div class="mail-details">
+        <p><strong>Asunto:</strong> <span id="mail-subject"></span></p>
+        <p><strong>De:</strong> <span id="mail-from"></span></p>
+        <p><strong>Prioridad:</strong> <span id="mail-priority"></span></p>
+      </div>
+      <div class="actions">
+        <button id="analyze-btn">Analizar</button>
+        <button id="suggest-reply-btn">Sugerir Respuesta</button>
+      </div>
+    </div>
+
+    <div id="no-mail-selected" class="hidden">
+      <p>No hay correo seleccionado</p>
+    </div>
+  </div>
+  <script src="../common/settings.js"></script>
+  <script src="../common/mailManager.js"></script>
+  <script src="../common/aiManager.js"></script>
+  <script src="../common/composeManager.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html> 

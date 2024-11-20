@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "__MSG_extensionName__",
+  "name": "SmartMail Assistant",
   "version": "1.0.0",
-  "description": "__MSG_extensionDescription__",
-  "author": "__MSG_extensionAuthor__",
+  "description": "Asistente inteligente para la gestión de correos electrónicos",
+  "author": "Tu Nombre",
   "applications": {
     "gecko": {
       "id": "smartmail-assistant@ejemplo.com",
@@ -12,43 +12,27 @@
   },
   "background": {
     "scripts": [
-      "content/scripts/ai-service.js",
-      "content/scripts/email-processor.js",
-      "background/background.js"
-    ],
-    "type": "module"
-  },
-  "experiment_apis": {
-    "SmartMailAPI": {
-      "schema": "api/schema.json",
-      "parent": {
-        "scopes": ["addon_parent"],
-        "paths": [["SmartMailAPI"]],
-        "script": "api/api.js"
-      }
-    }
-  },
-  "permissions": [
-    "storage",
-    "messagesRead",
-    "messagesMove",
-    "messagesDelete",
-    "compose",
-    "menus",
-    "notifications"
-  ],
-  "icons": {
-    "48": "icons/icon-48.png",
-    "96": "icons/icon-96.png"
-  },
-  "default_locale": "en",
-  "options_ui": {
-    "page": "content/ui/options.html",
-    "browser_style": true
+      "common/settings.js",
+      "common/mailManager.js",
+      "common/aiManager.js",
+      "common/composeManager.js",
+      "background.js"
+    ]
   },
   "browser_action": {
-    "default_icon": "icons/icon-48.png",
-    "default_title": "SmartMail Assistant",
-    "default_popup": "content/ui/options.html"
-  }
-}
+    "default_popup": "popup/popup.html",
+    "default_title": "SmartMail Assistant"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "messagesRead",
+    "storage",
+    "compose",
+    "tabs",
+    "messagesModify",
+    "<all_urls>"
+  ]
+} 
