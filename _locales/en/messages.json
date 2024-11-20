@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "SmartMail Assistant",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "AI-powered email assistant for Thunderbird",
+    "description": "Description of the extension"
+  },
+  "extensionAuthor": {
+    "message": "Your Name",
+    "description": "Name of the extension author"
+  }
+}

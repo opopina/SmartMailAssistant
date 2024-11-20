@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Thunderbird Debug",
+      "application": "thunderbird",
+      "profile": "/home/ricochet/thunderbird-dev-profile",
+      "addonPath": "${workspaceFolder}"
+    }
+  ]
+}

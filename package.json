@@ -1,0 +1,24 @@
+{
+  "name": "sma",
+  "version": "1.0.0",
+  "description": "SmartMail Assistant - Extensión de IA para Thunderbird",
+  "main": "dev-script.js",
+  "scripts": {
+    "start": "web-ext run --target=firefox-desktop --firefox-binary=/snap/bin/thunderbird",
+    "build": "web-ext build",
+    "dev": "node dev-script.js",
+    "watch": "web-ext run --target=firefox-desktop --firefox-binary=/snap/bin/thunderbird --watch-files content/**/* background/**/* manifest.json",
+    "lint": "web-ext lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opopina/SmartMailAssistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar": "^4.0.1",
+    "web-ext": "^8.3.0"
+  }
+}
